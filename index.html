@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main">
+        <div class="container">
+            <div class="clock">
+
+                <div id="sc" class="circle" style="--clr:#04fc43;"><i></i></div>
+                <div id="mn" class="circle circle2" style="--clr:#fee800;"><i></i></div>
+                <div id="hr" class="circle circle3" style="--clr:#ff2972;"><i></i></div>
+
+                <span style="--i:1"><b>1</b></span>
+                <span style="--i:2"><b>2</b></span>
+                <span style="--i:3"><b>3</b></span>
+                <span style="--i:4"><b>4</b></span>
+                <span style="--i:5"><b>5</b></span>
+                <span style="--i:6"><b>6</b></span>
+                <span style="--i:7"><b>7</b></span>
+                <span style="--i:8"><b>8</b></span>
+                <span style="--i:9"><b>9</b></span>
+                <span style="--i:10"><b>10</b></span>
+                <span style="--i:11"><b>11</b></span>
+                <span style="--i:12"><b>12</b></span>
+            </div>
+
+            <!-- Digital Clock -->
+            <div id="time">
+              <div id="hours" style="--clr:#ff2972;">00</div>
+              <div id="minute" style="--clr:#fee800;">00</div>
+              <div id="second" style="--clr:#04fc43;">00</div>
+              <div id="ampm">AM</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

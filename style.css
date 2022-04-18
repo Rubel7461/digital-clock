@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background:#2f363e ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    position: relative;
+    background: #2f363e;
+    min-height: 500px;
+    border-radius: 20px;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75),
+    10px 50px 70px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 150px;
+}
+.container .clock{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background:#2f363e ;
+    border-radius: 50%;
+    box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .clock::before{
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 15;
+}
+.container .clock span{
+    position: absolute;
+    inset: 20px;
+    color: #fff;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    user-select: none;
+}
+.container .clock span b{
+    font-size: 1.8em;
+    opacity: .25;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #3bd7ad, #e5cd61);
+    /* box-shadow: 0 0 9px 3px #3bd7ad,
+    inset 0 0 9px 3px #3bd7ad38;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 37px; */
+}
+.circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 11;
+}
+.circle2{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    z-index: 8;
+}
+.circle3{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    z-index: 9;
+}
+.circle i{
+    height: 96px;
+    width: 10px;
+    background-color: var(--clr);
+    opacity: .75;
+    transform-origin:bottom ;
+    transform: scale(.5);
+}
+.circle:nth-child(1) i {
+    width: 2px;
+    height: 165px;
+    position: relative;
+    top: -22px;
+}
+.circle:nth-child(2) i {
+    width: 8px;
+    height: 115px;
+    position: relative;
+    top: 3px;
+}
+.circle:nth-child(3) i {
+    position: relative;
+    bottom: 2px;
+}
+.circle::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--clr);
+    top: -5px;
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
+}
+
+/* Digital Clock Css */
+
+#time{
+    display: flex;
+    position: absolute;
+    bottom: 45px;
+    user-select: none;
+    font-size: 2em;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    padding: 10px 25px;
+    border-radius: 250px;
+    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+#time div{
+    position: relative;
+    width: 60px;
+    text-align: center;
+    color: var(--clr);
+}
+#time div:nth-child(1)::after {
+    content: ':';
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+}
+#time div:nth-child(2)::after{
+    content: ':';
+    margin-left: 10px;
+    position: relative;
+    top: -2px;
+    animation: sec 1s steps(1) infinite;
+}
+@keyframes sec{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+#time div:last-child{
+    font-size: .5em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
